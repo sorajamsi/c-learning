@@ -2,9 +2,12 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <windows.h>
 
 int main()
 {
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
     srand(time(NULL));
     int choice;
     int n, i, j, N;
@@ -13,7 +16,7 @@ int main()
     if (arr == NULL)
     {
         printf("Помилка! Не вдалося виділити память.\n");
-        return 1;
+        return -1;
     }
     while(1)
     {
@@ -78,7 +81,7 @@ int main()
                 printf(" |");
             }
             printf("\n");
-            printf("Верхній трикутник матриці(включаючи елементи головної діагоналі), по рядках як матрицю\n");
+            printf("Верхній трикутник матриці (включаючи елементи головної діагоналі), по рядках як матрицю\n");
             for(int i = 0; i < n; i++)
             {
                 printf("| ");
@@ -101,9 +104,14 @@ int main()
             }
             break;
             case 3:
+            free(arr);
             exit(0);
             default:
-           printf("Невірний вибір!\nПовторіть спробу\n");
+            printf("Невірний вибір!\nПовторіть спробу\n");
+            continue;
         }
+        break;
     }
+    free(arr);
+    return 0;
 }
