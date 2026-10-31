@@ -31,14 +31,18 @@ int main()
                 arr[i] = rand() % (N + 1);
             }
             printf("Ваша матриця\n");
-            printf("|");
             for(int i = 0; i < n; i++)
             {
+                printf("| ");
                 for(int j = 0; j < n; j++)
                 {
-                    printf("  %d", arr[i * n + j]);
+                    printf("%2d", arr[i * n + j]);
+                    if(j < n - 1)
+                {
+                    printf("\t");
                 }
-                printf(" |");
+                }
+                printf(" |\n");
             }
             printf("\n");
             printf("Верхній трикутник матриці (включаючи елементи головної діагоналі), по рядках як матрицю\n");
@@ -71,14 +75,18 @@ int main()
                 scanf("%d", &arr[i]);
             }
             printf("Ваша матриця\n");
-            printf("|");
             for(int i = 0; i < n; i++)
             {
+                printf("| ");
                 for(int j = 0; j < n; j++)
                 {
-                    printf("  %d", arr[i * n + j]);
+                    printf("%2d", arr[i * n + j]);
+                    if(j < n - 1)
+                {
+                    printf("\t");
                 }
-                printf(" |");
+                }
+                printf(" |\n");
             }
             printf("\n");
             printf("Верхній трикутник матриці (включаючи елементи головної діагоналі), по рядках як матрицю\n");
