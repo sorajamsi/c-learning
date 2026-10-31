@@ -74,7 +74,7 @@ int main()
         delete[] arr;
         return -1;
     }
-    while(1)
+    while(true)
     {
         cout << "Дані для масиву які?" << endl << "1. Ввести власноруч" << endl << "2. Згенерувати" << endl << "3. Вихід" << endl << "Введення: ";
         cin >> choice_1;
